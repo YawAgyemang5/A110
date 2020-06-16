@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java tutorial</title>
+</head>
+<body>
+<div id="msgs"></div>	
+<script>
+	/*alert("hello life");
+    console.log("freak out");
+    document.write("yaw agyemang");*/
+   // document.getElementById('msgs').innerHTML="yaw agyemang";
+    //search of all tag names for getelement by..
+
+    var x=5;
+    var y=7
+    console.log(x+y);
+
+    var person="yaw agyemang";
+    console.log(person);
+    console.log("my name is "+person);
+
+    //arrays
+    var myarray=new Array("frog","fish","mice");
+    console.log(myarray);
+
+    //or
+    var array=["name","index","class"];
+     
+    array[3]="pussy";
+    array.push("cat");
+    console.log(array.sort());
+
+    //associative arrays
+    var person1=[];
+    person1["name"]="yae";
+    person1["class"]=2;
+    person1["city"]="bant";
+     console.log(person1);
+/*
+     //objects
+     var object ={make:"ford",model:"urfyfn",year:88}
+     console.log(object);
+
+
+     //array objects
+     var arrayobject=
+     [
+     {
+     name:"yaw",
+     age:44,
+     year :44},
+      
+      {
+     name:"agyem",
+     age:49,
+     year :46},
+
+     {
+     name:"yaw",
+     age:80,
+     year :4104},
+
+     ];
+
+     console.log(arrayobject);*/
+ /*
+     //loops
+     //for loop
+     for(i=0;i<10;i++){
+     	console.log(i);
+     }
+     
+     //while
+     var x=0;
+     while(x<10){
+     	console.log(x);
+     	x++;
+     }  */
+
+  
+ /*var mean=["yaw","maku","naname"];
+
+   for(var x=0;x<mean.length;x++){
+      console.log(mean[x]);
+   }*/
+
+var people=[
+{
+name:"mame",
+category:"beauty"
+},
+
+{
+name:"papa",
+category:"herb"
+},
+
+{
+name:"keww",
+category:"gym"
+}
+
+];
+
+var output="";
+
+for(var x=0;  x<people.length;  x++){
+ document.getElementById("msgs").innerHTML +=
+ "<li>"  +people[x].name+" -" +people[x].category+
+ "</li>";
+}
+  var name=3;
+  switch(name){
+  case "1":
+      console.log("yaw");
+      break;
+  case "2":
+      console.log("kweku");
+      break;
+   case "3":
+      console.log("kweku");
+      break;
+  default:
+  console.log("name not available");
+  break;
+
+  }	 
+
+//functions
+
+/*
+  function sayhello() {
+  	console.log("say something")
+
+  	// body...
+  }
+  sayhello();*/
+
+  //passing a value to the function
+  function myfunc(greeting,name="yaw"){
+  	alert(greeting+" "+name);
+  }
+ myfunc("hello");
+</script>
+</body>
+</html>

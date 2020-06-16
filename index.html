@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- Java script requires JQuery plug in-->
+        <!--from google-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+         <script src="js/bootstrap.js"></script>
+          
+           <!--css plug in-->
+         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        *{margin:0px;
+      padding: 0px;
+    }
+
+        body{
+            background-image: url(plane2.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            text-align: center;
+           
+           margin:0px;
+           padding-left: 500px;
+
+        }
+
+        .btn{
+          background-color:rgb(187, 0, 36);
+          color: white;
+          width: 100px;
+          border:none;
+
+           }
+
+
+
+           /*button hover for all buttons*/
+           .btn:hover{
+            background-color: white;
+            color: rgb(187, 0, 36);
+            box-shadow: 10px 10px 30px  #777;
+            
+            border-width: 2px;
+           }
+
+            /*dropdown menu*/
+        .dropdown-menu{
+          text-align: center;
+          background-color:#f2f2f2;
+        }
+
+        /*dropdown menu hover*/
+        .dropdown-menu >li >a:hover{
+          background-color:rgb(187, 0, 36);
+          color:white;
+          box-shadow: 10px 10px 20px  #777;
+        }
+    </style>
+</head>
+
+        <body>
+                 <div class="btn-group" style="padding-right:100px;">
+                     <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">Cedi
+                      <span class="caret"></span></button>
+
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">EUR</a></li>
+                        <li><a href="#">USD</a></li>
+                        <li><a href="#">CHF</a></li>
+                        <li><a href="#">JPY</a></li>
+                      </ul>
+                      <div>
+                           <h1>Dexter Bookings</h1>
+                      </div>
+                  </div> 
+                   
+        </body>
+
+</html>

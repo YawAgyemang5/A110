@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Organic Shop| Signup</title>
+       <script type="text/javascript" src="myscript.js"></script>
+
+        <!-- Java script requires JQuery plug in-->
+        <!--from google-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+         <!--javascript plugin-->
+         <script src="js/bootstrap.js"></script>
+          
+         
+         <!--css bootstrsp plug in-->
+         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+         
+         <!--link to styling page-->
+         <link rel="stylesheet" type="text/css" href="style.css">
+        <!--link to Javascript page-->
+        <!--script src="script.js"></script-->
+      
+        <!--responsiveness-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+      <body>
+
+<!--navbar-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="home.html"><strong>L I N G O</strong></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+       
+      <li>
+            <form class="form-inline container-fluid" action="#" method="post">
+                  <input  class="form-control" placeholder="Search" type="text" name="search" style="width: 800px; margin-top: 7px;" class="form-control">
+                  <a href="#" class="btn btn-default" type="submit" name="" style="margin-top: 7px;">Search</a>
+           </form>
+      </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      
+        <li class="dropdown">
+          <a style="color: red;" href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+
+              <ul class="dropdown-menu">
+                
+                <li><a href="login.html">LogIn</span></a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li class="divider" role="separator"></li>
+                
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">WishList</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Help</a></li>
+              </ul> 
+          </li>
+
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+
+      </ul>
+    </div>
+  </div><!--nav container end-->
+</nav><!--nav end-->
+
+<div id="container"><!--form container-->
+  
+     <div class="alert" id="msg"></div>
+   
+          <form class=" text-center container-fluid"  id="regForm" onsubmit="return validateForm()" method="POST" action="new.php">
+          <h3 style="color:red;">Create Account</h3><br>
+
+                <div class="form-group">
+                  <input type="name" class="form-control" id="name" name="name" placeholder="First Name">
+                </div>
+
+
+                <div class="form-group">
+                  <input type="name" class="form-control" id="name2" name="name2" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+                </div>
+
+                <div class="form-group form-inline">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                  <button id="showpasswordbutton" title="show password" type="button" onclick="showpassword()"><span class="glyphicon glyphicon-eye-open"></span></button>
+                </div>
+
+                <div class="form-group form-inline" >
+                  <input type="password" class="form-control" id="password2" name="password2" placeholder="Repeat Password">
+                  <button id="showpasswordbutton" type="button" onclick="showpassword()"><span class="glyphicon glyphicon-eye-open"></span></button>
+                </div>
+
+                
+                 <div class="form-group">
+                  <input type="text" class="form-control" id="number" name="number" placeholder="Phone Number">
+                </div>
+
+                <div class="checkbox">
+                  <label><input id="check" name="check" type="checkbox" >I have accepted the Terms and Conditions</label>
+                </div><br>
+
+                <button type="submit"  class="btn btn-lg" style="width: 370px;">SignUp</button><hr>
+                <div>Already have an account?<a href="login.html"><strong> Login Here</strong> </a></div>     
+    </form><!--form end-->
+</div><!--container end-->
+
+
+<!--js code-->
+<script>
+/*SIGNUP VALIDATION SCRIPT*/
+/*show password script*/
+function showpassword()
+{
+    var x=document.getElementById("password");
+
+    var y=document.getElementById("password2");
+
+          if(x.type==="password" || y.type==="password2")
+          {
+            x.type="text";
+            y.type="text";
+          }
+
+          else
+          {
+            x.type="password";
+            y.type="password";
+          }
+
+ }
+
+
+ //SIGN up validation for input areas
+ //password,email,number and checkbox     
+
+function validateForm() {
+
+    var name = document.forms["regForm"]["name"].value;
+    var name2 = document.forms["regForm"]["name2"].value;
+    var email = document.forms["regForm"]["email"].value;
+    var password = document.forms["regForm"]["password"].value;
+    var password2 = document.forms["regForm"]["password2"].value;
+    var number= document.forms["regForm"]["number"].value;
+
+
+
+    var msg = document.getElementById('msg');
+                            if (name==""|| name2==""|| email == ""|| password==""|| password2=="" || number=="")
+                             {
+                                 msg.className="alert alert-danger";
+                                 msg.innerHTML = 'Please fill out all fields';
+                                return false;
+                            }
+
+                           else if(password!=password2)
+                            {
+                              msg.className='alert alert-danger';
+                               msg.innerHTML='Both password fields must have same characters';
+                               return false;
+                            }
+
+                            else if (password.length<10)
+                            {
+                              msg.className='alert alert-danger';
+                               msg.innerHTML='Password cant be less than 10 characters';
+                               return false;
+                            }
+
+                              else if (check.checked==false)
+                            {
+                              msg.className='alert alert-danger';
+                               msg.innerHTML='Please accept the terms and Conditions';
+                               return false;
+                             }
+
+}
+  </script>
+
+
+
+<!--footer-->
+<footer>
+   <div> 
+      <form class="form-inline text-center container-fluid ">Get deals:
+        <input type="email" class="form-control" size="50" placeholder="Email Address">
+        <button type="button" class="btn btn-default">Sign Up</button>
+        <p><h4>Organic Store Copyright &copy;2020</h4></p>
+      </form>
+      
+ </div>
+</footer>
+
+ <!--footer2-->
+<div class="row">
+    <div class="col-md-3">
+   <strong><h4>LET US HELP YOU</h4><br>
+          <li><a href="#">help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Delivery Service</a></li>
+          <li><a href="#">Return Policy</a></li>
+        </strong>  
+    </div>
+
+
+     <div class="col-md-3">
+      <strong>
+      <h4>ABOUT ORGANIC GHANA</h4><br>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          </strong>
+    </div>
+
+
+    <div class="col-md-3">
+      <strong>
+      <h4>ABOUT ORGANIC GHANA</h4><br>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          </strong>
+    </div>
+    <div class="col-md-3" id="social">
+      <h4>GET IN TOUCH</h4><br>
+         <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\fb.png"></a>
+          <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\twitterblack.png"></a>
+          <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\instagram.png"></a>
+        </div>
+    </div>
+
+</body>
+</html>

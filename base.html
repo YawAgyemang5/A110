@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Organic Shop</title>
+  
+
+ <!-- Java script requires JQuery plug in-->
+        <!--from google-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+         <script src="js/bootstrap.js"></script>
+          
+           <!--css plug in-->
+         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+      
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+*{margin:0px;
+      padding: 0px;
+    }
+
+a{
+  text-decoration: none;
+  color:black;}
+
+#myCarousel{
+  width:79%;
+  float:right;
+}
+
+
+li{
+  list-style: none;
+  
+}
+
+
+#social img{
+  
+  width: 35px;
+  overflow: hidden;
+
+   }
+
+
+
+   
+   
+footer {
+	  background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    
+
+.btn{
+  background-color:rgb(10,20,0);
+  color: white;
+}
+   
+
+
+.row{
+  background-color:
+  color: white;
+  padding: 35px;
+
+}
+
+aside{
+  background-color: #f2f2f2;
+  padding-top:20px;
+  width:20%;
+  text-align: center;
+  float: left;
+}
+
+
+ aside .active{
+  background-color:rgb(10,20,0);
+  padding: 7px;
+  width: 40px;
+  color: white;
+padding-left: 115px;
+padding-right: 117px;
+text-decoration: none;
+
+
+}
+
+aside a:hover{
+  background-color:white;
+  padding:7px;
+  text-decoration: none;
+  color: black;
+  padding-left: 80px;
+padding-right: 79px;
+  
+
+}
+
+
+.clr{ clear: both; }
+
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">ORGANIC</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+       
+        <li><form class="form-inline container-fluid" action="#">
+                      <input  class="form-control" placeholder="Search" type="text" name="search" style="width: 800px; margin-top: 7px;" class="form-control">
+                      <a href="#" class="btn btn-success" type="submit" name="" style="margin-top: 7px;">Search</a>
+                      
+                     </form>
+        </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">--User--</li>
+                <li><a href="#">LogIn</a></li><br>
+                <li><a href="#">SignUp</a></li><
+                <li class="divider" role="separator"><a href="#"></a></li>
+                <li class="dropdown-header">--Others--</li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">WishList</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Help</a></li>
+              </ul> 
+          </li>
+
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<aside>
+      <ul>
+          <li><a class="active" href="#">Foods</a></li><br>
+          <li><a href="#">Fruits</a></li><br>
+          <li><a href="#">Oil</a></li><br>
+          <li><a href="#">Beauty</a></li><br>
+          <li><a href="#">Herbs</a></li><br>
+          <li><a href="#">Seeds</a></li><br>
+          <li><a href="#">Health</a></li><br>
+          <li><a href="#">Sups</a></li><br>
+          <li><a href="#">Dummy</a></li><br>
+          <li><a href="#">Dummy</a></li><br>
+
+      </ul>
+</aside>
+
+
+<div class="clr"></div><br>
+
+
+  
+
+<footer>
+   <div> 
+      <form class="form-inline text-center container-fluid ">Get deals:
+        <input type="email" class="form-control" size="50" placeholder="Email Address">
+        <button type="button" class="btn btn-info">Sign Up</button>
+        <p><h4>Organic Store Copyright &copy;2020</h4></p>
+      </form>
+      
+ </div>
+</footer>
+
+ 
+<div class="row">
+    <div class="col-md-4">
+   <strong><h4>LET US HELP YOU</h4><br>
+          <li><a href="#">help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Delivery Service</a></li>
+          <li><a href="#">Return Policy</a></li>
+        </strong>  
+    </div>
+
+
+    <div class="col-md-4">
+      <strong>
+      <h4>ABOUT ORGANIC GHANA</h4><br>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          </strong>
+    </div>
+    <div class="col-md-4" id="social">
+      <h4>GET IN TOUCH</h4><br>
+          <a href="#"><img src="fb.png"></a>
+          <a href="#"><img src="twitterblack.png"></a>
+          <a href="#"><img src="instagram.png"></a>
+        </div>
+    </div>
+
+</body>
+</html>

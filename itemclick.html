@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sell |To Us</title>
+
+
+  
+
+      
+        <!-- Java script requires JQuery plug in-->
+        <!--from google-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!--bootsrap javascript-->
+        <script src="js/bootstrap.js"></script>
+              
+        <!--css plug in-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+              
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+*{margin:0px;
+      padding: 0px;
+    }
+
+a{
+  text-decoration: none;
+  color:black;}
+
+
+li{
+  list-style: none;
+}
+
+body{
+  background-color:white;
+}
+
+
+/*social media icon styling*/
+#social img
+{ 
+  width: 35px;
+  overflow: hidden;
+}
+
+
+/*footer stling*/
+footer
+ {
+    background-color: #f2f2f2;
+      padding: 25px;
+  }
+
+   
+
+/*button style for all buttons*/
+.btn{
+  background-color:red;
+  color: white;
+
+}
+
+   /*button hover for all buttons*/
+   .btn:hover{
+    background-color: white;
+    color: red;
+    box-shadow: 10px 10px 30px  #777;
+    
+    border-width: 2px;
+   }
+
+
+/*row stling for all rows*/
+.row{
+  background-color:
+  color: white;
+  padding: 35px;
+
+}
+
+
+
+/*clear both*/
+.clr{ clear: both; }
+
+
+/*navbar title*/
+.navbar-brand{
+  color: red; 
+  background-color: white;
+  font-family:Georgia;
+}
+
+/*navbar title*/
+.navbar-brand strong
+{
+  color: red;
+}
+
+
+
+/*dropdown menu*/
+.dropdown-menu{
+  text-align: center;
+  background-color:#f2f2f2;
+}
+
+/*dropdown menu hover*/
+.dropdown-menu >li >a:hover{
+  background-color:red;
+  color:white;
+  box-shadow: 10px 10px 20px  #777;
+}
+
+/*glyphicon styling for all*/
+
+
+
+#itemdiv{
+  width: 75%;
+  background-color:white;
+  height: 800px;
+  border-radius:5px;
+  float: left;
+  margin-bottom:20px;
+  box-shadow: 2px 2px 10px  #777;
+
+}
+
+
+/*Rating Glypicon styling*/
+.glyphicon-star{
+  color: gold;
+  font-size: 25px;
+
+}
+
+.glyphicon-star-empty{
+  color: gold;
+}
+
+
+#productpicture
+{
+  height: 320px;
+}
+
+/*#product{
+  background-color:red; 
+  color:white;
+  padding: 5px;
+  
+}*/
+
+
+aside{
+  background-color:white;
+  padding: 20px;
+    width:24%;
+  
+  float:right;
+ border-radius: 5px;
+  box-shadow: 2px 2px 10px  #777;
+}
+
+.aside1{
+   background-color:white;
+  padding: 20px;
+    width:24%;
+  
+  float:right;
+ border-radius: 5px;
+  margin-top:20px;
+   box-shadow: 2px 2px 10px  #777;
+}
+
+.aside2{
+    background-color:white;
+  padding: 20px;
+    width:24%;
+  
+  float:right;
+ border-radius: 5px;
+ margin-top:20px;
+ box-shadow: 2px 2px 10px  #777;
+}
+
+.aside3{
+    background-color:white;
+  padding: 20px;
+    width:24%;
+  
+  float:right;
+ border-radius: 5px;
+ margin-top:20px;
+  box-shadow: 2px 2px 10px  #777;
+}
+
+#Deliveryicon{
+  height: 70px;
+  width: 70px;
+  padding:5px;
+}
+
+#panel3{
+    width: 75%;
+  background-color:white;
+  height:300px;
+  border-radius:5px;
+  float: left;
+  margin-bottom:10px;
+  
+border: none;
+  font-size: 18px;
+  box-shadow: 2px 2px 10px  #777;
+
+}
+
+#panel4{
+    width: 75%;
+  background-color:white;
+  height:330px;
+  border-radius:5px;
+  float: left;
+  margin-bottom:10px;
+ 
+  
+border: none;
+  font-size: 18px;
+   box-shadow: 2px 2px 10px  #777;
+
+}
+
+/*Inner panel of main panels styling*/
+#innerpanel{
+  width:49%;
+  float:left;
+  padding: 20px;
+  
+}
+
+/*Inner panel of main panels styling*/
+#innerpanel1{
+   width:49%;
+  float:right;
+  padding: 20px;
+  
+ 
+
+}
+
+
+
+#image-gallery1{
+
+  padding-right: 35px; 
+  padding-left:30px;
+   background-color:white;
+  height:260px;
+  width: 75%;
+   border-radius:5px;
+  
+
+}
+
+#topsellingimages
+{
+  height: 100px;
+  border: none;
+}
+
+#topselling .thumbnail:hover{
+  border-color:white;
+  border-width:5px;
+  text-decoration: none;
+  box-shadow: 1px 1px 10px  #777;}
+
+  #selectquantity{
+    padding: 5px;
+
+  }
+  .selectquantity_inside{
+    padding: 2px;
+    
+    color:red;
+    border-color:black;
+    border-width: 1px;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<!--navbar-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="home.html"><strong>L I N G O</strong></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+       
+      <li>
+            <form class="form-inline container-fluid" action="#">
+                  <input  class="form-control" placeholder="Search" type="text" name="search" style="width: 800px; margin-top: 7px;" class="form-control">
+                  <a href="#" class="btn" type="submit" name="" style="margin-top: 7px;">Search</a>
+           </form>
+      </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      
+        <li class="dropdown">
+          <a style="color: red;" href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+
+              <ul class="dropdown-menu">
+                
+                <li><a href="login.html">LogIn</span></a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li class="divider" role="separator"></li>
+                
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">WishList</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Help</a></li>
+              </ul> 
+          </li>
+
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+
+      </ul>
+    </div>
+  </div><!--nav container end-->
+</nav><!--nav end-->
+
+<div id="container" style="padding:10px;">
+
+      <div id="itemdiv" >
+           
+
+                 <div style="float: left; padding:60px;" >
+                      
+                        
+                      <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\whey.jpg" alt="image2" class="img-rounded" id="productpicture">
+                      <hr>
+
+                    <div id="social">
+                    <h4>Share this product</h4>
+                        <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\fb.png"></a>
+                        <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\twitterblack.png"></a>
+                        <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\instagram.png"></a>
+                      </div>
+      
+                  </div>
+                     
+                    
+                    <div style="float: right;padding-top: 25px; padding-right:71px; ">
+                        <div class="inside">
+                              <h2>Golden Whey Protein     <span style="color: red;" class="glyphicon glyphicon-heart"></span></h2>
+                              <p><h5>brand: Whey | Whey Ghana</h5></p>
+                              <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-star"></span>
+                        </div><hr>
+                        
+                        <div class="inside1">
+
+                             <div id="selectquantity">
+                             <input class="selectquantity_inside" type="name" name="name" placeholder="Select Quantity" disabled="">
+                             <select class="selectquantity_inside">
+                                   <option value="1" selected="">1</option>
+                                   <option value="2">2</option>
+                                   <option value="3">3</option>
+                                   <option value="4">4</option>
+                                   <option value="5">5</option>
+                                   <option value="6">6</option>
+                                   <option value="7">7</option>
+                                   <option value="8">8</option>
+                                   <option value="9">9</option>
+                                   <option value="10">10</option>
+                           </select>
+                             </div>
+
+                            <h3><strong>$100.00</strong></h3>
+                            <s><h4 style="color: red;">$150.00</h4></s>
+                            <button style="width:460px;" class="btn btn-lg" type="button">Add to cart<span style="padding-left: 250px;" class="glyphicon glyphicon-shopping-cart" ></span></button>
+                        </div><hr>
+
+                        <div class="inside2">
+                             <h4><strong>Promotions</strong></h4>
+                              <p><span class="glyphicon glyphicon-gift"></span> Buy Organic express: enjoy free organic foods atlower prices</p>
+
+                              <p><span class="glyphicon glyphicon-gift"></span> Buy Organic express: enjoy free organic foods atlower prices</p>
+                    </div>
+            </div>
+      </div>
+
+<aside>
+      
+          <h3><strong> Delivery and Returns</strong></h3><hr>
+
+          <h3><img class="img-rounded" id="Deliveryicon" src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\product page\expressdelivery.jpg"  > Express Delivery</h3>
+          <p><span class="glyphicon glyphicon-gift"></span> Buy Organic express: enjoy free organic foods atlower prices</p><button class="btn btn-sm">learn more</button> <hr>
+         
+          <h3><img class="img-rounded" id="Deliveryicon" src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\product page\express2.png">Delivery Info</h3>
+          <p><span class="glyphicon glyphicon-gift"></span> Buy Organic express: enjoy free organic foods atlower prices</p><button class="btn btn-sm ">learn more</button> <hr>
+          
+           <h3><img class="img-rounded" id="Deliveryicon" src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\product page\sample.jpg"  > Return Policy</h3>
+          <p><span class="glyphicon glyphicon-gift"></span> Buy Organic express: enjoy free organic foods atlower prices</p><button class="btn btn-sm ">learn more</button>
+          
+</aside>
+
+<div class="aside1">
+
+                  <h3><strong>Seller Inforation</strong></h3><hr>
+                  <h3>Whey Ghana Ltd.</h3>
+                  <p>This brand is affordable ,and healthy for any individual who wou
+                  uscle within a short time frame coupled with ser</p>
+                  <button class="btn btn-sm">Read more</button>
+</div>
+
+
+
+
+
+<div class="panel panel-default" id="panel3">
+  <div class="panel-heading">Product Details
+  </div>
+
+    <div class="panel-body">
+      <p>This brand is affordable ,and healthy for any individual who would want to build his muscle within a short time frame coupled with serious day and night workoutsThis brand is affordable ,and healthy for any individual who would want to build his muscle within a short time frame coupled with serious day and night workouts</p>
+    </div>
+    <div class="panel-footer">
+          <p>This brand is affordable ,and healthy for any individual who would want to build his muscle within a short time frame coupled with serious day and night workoutsThis 
+          </p>
+    </div>
+</div><br>
+
+
+<div class="aside2">
+          <strong>Have Something to sell?</strong><hr>
+          <p>Click here <span class="glyphicon glyphicon-hand-right"></span><button class="btn btn-sm ">Sell to Us</button></p>
+</div>
+
+
+
+
+
+<div class="panel panel-default" id="panel4">
+    <div class="panel-heading">Product Specifications
+    </div>
+      <div class="panel-body">
+         <div class="panel panel-default" id="innerpanel">
+            <div class="panel-heading">Key Features</div>
+            <div class="panel-body">
+                 <ul > 
+                      <li>-Newt Weight</li>
+                      <li>-Protein</li>
+                      <li>-Vitamins</li>
+                      <li>-Calcium Mono oxide</li>
+                      <li>-Phospates</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="panel panel-default" id="innerpanel1">
+            <div class="panel-heading">Specification
+            </div>
+            <div class="panel-body">
+                 <ul> 
+                      <li><strong>Bar code :</strong>dhdjjsjdds</li>
+                      <li><strong>Color :</strong>Red</li>
+                      <li><strong>Weight :</strong>25kg</li>
+                      <li><strong>Flavour :</strong>Strawberry</li>
+                      <li><strong>Texture :</strong>jdjjdd</li>
+                </ul>
+            </div>
+            
+          </div>
+       </div>
+      </div>
+<br>
+
+<div class="aside3">
+          <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\whey.jpg" alt="image2" class="img-rounded" style="height: 130px; width: 130px; float: left;">
+
+          <div style="float: right;">
+          <h5>Golden Whey Protein</h5>  
+          <h4><strong>$100.00</strong></h4>
+          <s><h5 style="color: red;">$150.00</h5></s>
+
+          <button style="width: 130px;"  class="btn btn-sm" type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart" style="padding-left: 30px;" ></span></button>
+
+        </div>
+          
+</div>
+
+<div class="aside1">
+
+          <h3><strong>Frequently asked questions</strong></h3><hr>
+          <h3>Whey Ghana Ltd.</h3>
+          <p>This brand is affordable ,and healthy for any individual who wou
+          uscle within a short time frame coupled with ser</p>
+          <button class="btn btn-sm">FAQ</button>
+</div>
+
+
+<div class="panel panel-default" style=" width: 75%; margin-top:1440px; margin-bottom:-125px; margin-right: 0px; ">
+  <div class="panel-body"><h4>People also search for </h4></div>
+</div>
+      
+            <div id="image-gallery1">
+  
+      <div class="row">
+
+       <div class="col-md-3" id="topselling" >
+            <a href="#"class="thumbnail" >
+              
+              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\image90.jpeg" alt="image2" id="topsellingimages">
+              <h4>Banana</h4>
+              <h4><strong>$10.00</strong></h4>
+              <button class="btn btn-sm" type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+              <button class="btn btn-sm" type="button">Wish <span class="glyphicon glyphicon-heart"></span></button> 
+          </a>
+        </div>
+           
+
+          <div class="col-md-3" id="topselling" >
+            <a href="#"class="thumbnail" >
+              
+              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\image91.jpeg" alt="image2" id="topsellingimages">
+              <h4>Banana</h4>
+              <h4><strong>$10.00</strong></h4>
+              <button class="btn btn-sm" type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+              <button class="btn btn-sm " type="button">Wish <span class="glyphicon glyphicon-heart"></span></button> 
+          </a>
+        </div>
+
+            <div class="col-md-3" id="topselling" >
+            <a href="#"class="thumbnail" >
+              
+              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\image92.jpg" alt="image2" id="topsellingimages">
+              <h4>Apple</h4>
+              <h4><strong>$20.00</strong></h4>
+              <button class="btn btn-sm " type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+              <button class="btn btn-sm " type="button">Wish<span class="glyphicon glyphicon-heart"></span></button> 
+          </a>
+        </div>
+
+            <div class="col-md-3" id="topselling" >
+            <a href="#"class="thumbnail" >
+              
+              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\image95.jpg" alt="image2" id="topsellingimages">
+              <h4>Red Pepper</h4>
+             <h4><strong>$30.00</strong></h4>
+              <button class="btn btn-sm" type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+              <button class="btn btn-sm" type="button">Wish <span class="glyphicon glyphicon-heart"></span></button> 
+          </a>
+        </div>
+      </div>
+    </div><br>
+
+   
+</div>
+<div class="clr" ></div>
+<footer>
+   <div> 
+      <form class="form-inline text-center container-fluid ">Get deals:
+        <input type="email" class="form-control" size="50" placeholder="Email Address">
+        <button type="button" class="btn">Sign Up</button>
+        <p><h4>Organic Store Copyright &copy;2020</h4></p>
+      </form>
+      
+ </div>
+</footer>
+
+ 
+<div class="row">
+    <div class="col-md-3">
+   <strong><h4>LET US HELP YOU</h4><br>
+          <li><a href="#">help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Delivery Service</a></li>
+          <li><a href="#">Return Policy</a></li>
+        </strong>  
+    </div>
+
+
+     <div class="col-md-3">
+      <strong>
+      <h4>ABOUT ORGANIC GHANA</h4><br>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          </strong>
+    </div>
+
+
+    <div class="col-md-3">
+      <strong>
+      <h4>ABOUT ORGANIC GHANA</h4><br>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          </strong>
+    </div>
+    <div class="col-md-3" id="social">
+      <h4>GET IN TOUCH</h4><br>
+          <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\fb.png"></a>
+          <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\twitterblack.png"></a>
+          <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\instagram.png"></a>
+        </div>
+    </div>
+</body>
+</html>
