@@ -1,1 +1,1 @@
-this is an ecommerce website for an organic and inorgainc products   
+this is an ecommerce website for an organic and inorgainc products       
