@@ -83,7 +83,7 @@
               background-color: white;
               color: red;
               box-shadow: 10px 10px 30px  #777;
-              border-width: 2px;
+              
              }
 
 
@@ -221,7 +221,7 @@
 
 
           /*product hover*/
-          #topselling .thumbnail:hover{
+          #topselling:hover{
             border-color:white;
             border-width:5px;
             text-decoration: none;
@@ -353,6 +353,41 @@
              height:470px;
           }
 
+
+          /*button style for modal buttons*/
+          /*When an add to cart button is clicked or hovered*/
+             #modalbutton1{
+              background-color:red;
+              color: white;
+            }
+
+             #modalbutton2{
+              background-color:white;
+              color:red;
+            }
+
+              
+               #modalbutton1:hover{
+                
+                box-shadow: 10px 10px 30px  #777;
+                
+              
+               }
+
+                #modalbutton2:hover{
+                
+                box-shadow: 10px 10px 30px  #777;
+                
+              
+               }
+
+               #myModal{
+                 padding-top:160px;
+                       
+
+
+   }
+
        </style>
     </head>
 <body>
@@ -397,7 +432,7 @@
               </ul> 
           </li>
 
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
 
       </ul>
     </div>
@@ -406,6 +441,34 @@
 
 
 <div id="container"><!--container begins-->
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+            <div class="modal-content">
+                     <!-- Modal header-->
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Add to cart  <span class="glyphicon glyphicon-shopping-cart"></span></h4>
+                    </div>
+                      <!-- Modal body-->
+                    <div class="modal-body">
+                      <p class="alert alert-success">Product added to cart</p>
+                    </div>
+                     <!-- Modal footer-->
+                    <div class="modal-footer">
+                      <a href="cart.html" role="button" id="modalbutton1" class="btn btn-default">Proceed to Cart and checkout</a>
+                      <button type="button" class="btn btn-default" id="modalbutton2" data-dismiss="modal">Continue shopping</button>
+                </div>
+
+            </div>
+
+      </div>
+</div>
+
 
 <aside>
       <ul>
@@ -507,7 +570,7 @@
 
        <div class="col-md-3" id="topselling" >
             
-              <a href="itemclick.html" class="thumbnail" >
+              <a href="itemclick.html" class="thumbnail">
                 
                   <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\whey.jpg" alt="image2" id="topsellingimages">
                   <span class="glyphicon glyphicon-star"></span>
@@ -516,12 +579,14 @@
                   <span class="glyphicon glyphicon-star"></span>
                   <span class="glyphicon glyphicon-star"></span>
 
-               
+              
                   <h4>Gold Standard Whey Protein</h4>
                   <h4><strong>$100.00</strong></h4>
-                  <button class="btn btn-sm" type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+              </a> 
+                  <button class="btn btn-sm" type="button"data-toggle="modal" data-target="#myModal">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+
                   <button class="btn btn-sm" type="button">Add to wishlist  <span class="glyphicon glyphicon-heart"></span></button> 
-              </a>  
+               
         </div>
            
 
@@ -538,7 +603,8 @@
 
               <h4>Nivea Skin Cream</h4>
               <h4><strong>$10.00</strong></h4>
-              <button class="btn btn-sm" type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+              <button class="btn btn-sm" type="button"data-toggle="modal" data-target="#myModal">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+
               <button class="btn btn-sm" type="button">Add to wishlist  <span class="glyphicon glyphicon-heart"></span></button> 
           </a>
         </div>
@@ -556,7 +622,8 @@
 
               <h4>Apple</h4>
               <h4><strong>$20.00</strong></h4>
-              <button class="btn btn-sm" type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+              <button class="btn btn-sm" type="button"data-toggle="modal" data-target="#myModal">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+
               <button class="btn btn-sm" type="button">Add to wishlist  <span class="glyphicon glyphicon-heart"></span></button> 
           </a>
         </div>
@@ -574,7 +641,7 @@
 
               <h4>Red Pepper</h4>
               <h4><strong>$10.00</strong></h4>
-              <button class="btn btn-sm" type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
+              <button class="btn btn-sm" type="button" data-toggle="modal" data-target="#myModal">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
               <button class="btn btn-sm" type="button">Add to wishlist  <span class="glyphicon glyphicon-heart"></span></button> 
           </a>
         </div>
@@ -605,7 +672,7 @@
           <div class="col-md-3" id="topselling" >
             <a href="#"class="thumbnail" >
               
-              <img src="C:\Users\lenovo\Desktop\BO0TSTRAP\Images\image gallery\banana2.jpg" alt="image2" id="topsellingimages">
+              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\banana1.jpg" alt="image2" id="topsellingimages">
               <h4>Banana</h4>
               <h4><strong>$10.00</strong></h4>
               <button class="btn btn-sm " type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
@@ -616,7 +683,7 @@
             <div class="col-md-3" id="topselling" >
             <a href="#"class="thumbnail" >
               
-              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\mango2.jpg" alt="image2" id="topsellingimages">
+              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\mango1.jpg" alt="image2" id="topsellingimages">
               <h4>Mangoe</h4>
              <h4><strong>$10.00</strong></h4>
               <button class="btn btn-sm " type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>
@@ -627,7 +694,7 @@
             <div class="col-md-3" id="topselling" >
             <a href="#"class="thumbnail" >
               
-              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\watermelon1.jpg" alt="image2" id="topsellingimages">
+              <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\watermelon2.jpg" alt="image2" id="topsellingimages">
               <h4>Watermelon</h4>
              <h4><strong>$20.00</strong></h4>
               <button class="btn btn-sm " type="button">Add to cart   <span class="glyphicon glyphicon-shopping-cart"></span></button>

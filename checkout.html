@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <title>Cart</title>
+      <title>Checkout</title>
 
       
         <!-- Java script requires JQuery plug in-->
@@ -37,16 +37,10 @@
           padding-right: 30px;
          }
 
-          /*panel*/
-          .panel{
+          /*carousel*/
+          #myCarousel{
             width:75%;
             float:right;
-              background-color:white;
-          color: white; 
-          font-size: 18px;
-          
-          color:black;
-
  
           }
 
@@ -94,7 +88,13 @@
 
 
 
-         
+          /*icon show under carousel*/
+
+          #iconsunderslider-row{
+           
+            padding:50px;
+
+          }
 
 
           /*footer row styling*/
@@ -104,7 +104,10 @@
 
           }
 
-         
+          /*all rows*/
+          .row{
+            padding:40px;
+          }
 
 
           /*all row hover*/
@@ -118,7 +121,6 @@
           /*sidebar*/
           aside{
             background-color:white;
-            height:900px;
             width:23%;
             text-align: center;
             float: left;
@@ -144,6 +146,17 @@
           .clr{ clear: both; }
 
 
+          /*icons under carousel*/
+          #iconsunderslider
+          {
+            background-color:white;
+            border-radius:100px;
+            text-align: center;
+            border-color:rgb(10,20,0);
+            box-shadow: 1px 1px 5px  #777;
+
+          }
+
 
 
 
@@ -154,13 +167,106 @@
 
 
 
+
+
+          #image-gallery1
+          {
+
+            padding-right: 35px; 
+            padding-left:30px;
+             background-color:white;
+            height:370px;
+            box-shadow: 0.5px 0.5px 2.5px  #777;
+
+          }
+
+
+
+
+
+          #image-gallery3{
+
+            padding-right: 35px; 
+            padding-left:30px;
+             background-color:white;
+            height:400px;
+             box-shadow: 0.5px 0.5px 2.5px  #777;
+
+          }
+
+
+
+
+
+          #image-gallery{
+
+            padding-right: 35px; 
+            padding-left:30px;
+             background-color:white;
+            height:400px;
+            box-shadow: 0.5px 0.5px 2.5px  #777;
+
+          }
+
+
+
+          /*panel styling*/
+          .panel{
+            background-color: #f2f2f2;
+          color: white; font-size: 18px;
+          margin: 0px;
+          color:black;
+          }
+
+
+
+          /*product hover*/
+          #topselling .thumbnail:hover{
+            border-color:white;
+            border-width:5px;
+            text-decoration: none;
+            box-shadow: 1px 1px 10px  #777;
+            border-radius: 10px;
+
+
+          }
+
           /*thumbnail class*/
           .thumbnail{
             border: none;
           }
 
 
-        
+          /*height for productimages*/
+          #topsellingimages
+          {
+            height: 200px;
+          }
+
+
+
+          /*advert pictures*/
+          #image-gallery2 .row{
+            background-color:#f2f2f2;
+            height: 355px;
+            padding: 7px;
+            margin-left: 0px;
+            margin-right:0px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px  #777;
+
+
+          }
+
+
+          /*advert div*/
+          #advert1{padding-right: 4px;  padding-left: 3px;}
+          #advert2{padding-left: 4px; padding-right: 3px;}
+
+
+          /*Advert images*/
+          #advert1 img{height: 330px; width:900px;}
+          #advert2 img{height: 330px; width:900px;}
 
 
 
@@ -216,43 +322,38 @@
 
 
 
-        
+          /*styling for image icons under carousel*/
+          .img-circle{
+            height:60px; 
+            width:70px;
+             margin-right: 38px;
+           }
+
+           /*Styling for the first 2 icons*/
+           #iconfont{
+            font-size: 23px;
+            margin-right: 40px;
+           }
+           
+           /*Styling for the last two icons*/
+            #iconfont2{
+            font-size: 23px;
+            margin-right: 100px;
+           }
 
 
 
           .glyphicon-shopping-cart{
             color: red;
           }
-           #selectquantity{
-    padding: 5px;
-
-  }
-  .selectquantity_inside{
-    padding: 2px;
-    
-    color:red;
-    border-color:black;
-    border-width: 1px;
-  }
-    
-    #cart_item_div
-    {
-     padding-top: 50px;
-     }     
-
-    #cart_item_image{
-      height:180px; width: 180px;}
-
-    #cart_row
-    {
-    height: 180px;
-     }
-
-
-
+         
+          /*carousel immages*/
+          #carousel-item img{
+            width:970px;
+             height:470px;
+          }
 
        </style>
-    
     </head>
 <body>
 
@@ -265,7 +366,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="home.html"><strong>O R G A N I C</strong></a>
+      <a class="navbar-brand" href="#"><strong>O R G A N I C</strong></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -296,7 +397,7 @@
               </ul> 
           </li>
 
-        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
 
       </ul>
     </div>
@@ -304,152 +405,9 @@
 </nav><!--nav end-->
 
 
-
-
 <div id="container"><!--container begins-->
 
-            <aside>
-                  <ul>
-                      <h3 style="background-color: red;color: white; padding:7px;">Categories</h3><br>
-                      <li><a class="active" href="#">Fuits</a></li><br>
-                      <li><a href="#">Herbs</a></li><br>
-                      <li><a href="#">Vegetables</a></li><br>
-                      <li><a href="#">Supplements</a></li><br>
-                      <li><a href="#">Skin Porducts</a></li><br>
-                      <li><a href="#">Hair Products</a></li><br>
-                      <li><a href="#">Beauty</a></li><br>
-                      <li><a href="#">Seeds</a></li><br>
-                      <li><a href="#">Flowers</a></li><br>
-                  </ul>
-            </aside><!--sidebar end-->
-
-
-<div class="panel panel-default"><!--panel start-->
-      <div class="panel-heading"><!--panell header-->
-        Cart
-      </div>
-
-      <div class="row" id="cart_row"><!--row start-->
-
-
-            <div class="col-md-4"><!--image div-->
-             <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\whey.jpg" alt="image2" class="img-rounded" id="cart_item_image">
-            </div>
-
-
-            <div class="col-md-5" id="cart_item_div" ><!--quantity select div-->
-                <h4>Golden Whey Protein</h4>
-                <input class="selectquantity_inside" type="name" name="name" placeholder="Select Quantity" disabled="">
-                      <select class="selectquantity_inside">
-                            <option value="1" selected="">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                    </select> 
-             </div>  
-
-
-             <div class="col-md-3"id="cart_item_div"><!--price div-->
-               <h4>Price</h4>
-               <h3><strong>$100.00</strong></h3> 
-             </div>               
-          
-     </div><hr><!--row end-->
-
-
-
-
-      <div class="row" id="cart_row"><!--row start-->
-
-
-            <div class="col-md-4"><!--image div-->
-             <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\skin3.jpeg" alt="image2" class="img-rounded" id="cart_item_image">
-            </div>
-
-
-            <div class="col-md-5" id="cart_item_div" ><!--quantity select div-->
-                <h4>Golden Whey Protein</h4>
-                <input class="selectquantity_inside" type="name" name="name" placeholder="Select Quantity" disabled="">
-                      <select class="selectquantity_inside">
-                            <option value="1" selected="">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                    </select> 
-             </div>  
-
-
-             <div class="col-md-3"id="cart_item_div"><!--price div-->
-               <h4>Price</h4>
-               <h3><strong>$100.00</strong></h3> 
-             </div>               
-          
-     </div><hr><!--row end-->
-
-
-
-
-      <div class="row" id="cart_row"><!--row start-->
-
-
-            <div class="col-md-4"><!--image div-->
-             <img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\image gallery\tomatoe.jpeg" alt="image2" class="img-rounded" id="cart_item_image">
-            </div>
-
-
-            <div class="col-md-5" id="cart_item_div" ><!--quantity select div-->
-                <h4>Golden Whey Protein</h4>
-                <input class="selectquantity_inside" type="name" name="name" placeholder="Select Quantity" disabled="">
-                      <select class="selectquantity_inside">
-                            <option value="1" selected="">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                    </select> 
-             </div>  
-
-
-             <div class="col-md-3"id="cart_item_div"><!--price div-->
-               <h4>Price</h4>
-               <h3><strong>$100.00</strong></h3> 
-             </div>               
-          
-     </div><hr><!--row end-->
-
-
-
-
-   <div class="panel-footer" style="float: right;">
-
-          <a href="checkout.html" class="btn btn-lg" type="button">Checkout</a> 
-          <button type="button" class="btn btn-default btn-lg" id="modalbutton2" data-dismiss="modal">Continue shopping</button> 
-    </div>
-
-</div><!--panel end-->
-
-
-
-<div class="clr"></div><!--clearing both-->
-
-</div>
+       </div>
 
 <!--footer--> 
 <footer>
@@ -494,7 +452,7 @@
           </strong>
     </div>
     
-    <!--social media touchs-->
+     <!--social media touchs-->
     <div class="col-md-3" id="social">
       <h4>GET IN TOUCH</h4><br>
           <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\fb.png"></a>
@@ -502,6 +460,7 @@
           <a href="#"><img src="C:\Users\lenovo\Desktop\BOOTSTRAP\Images\socila media handles\instagram.png"></a>
         </div>
     </div>
+
 
 
 
